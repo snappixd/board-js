@@ -12,14 +12,6 @@ body {
     margin: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 700px;
-}
-
 .square {
     width: 16px;
     height: 16px;
@@ -29,6 +21,53 @@ body {
     transition: 2s ease;
 }
 
+.square-1,
+.square-2,
+.square-3,
+.square-4,
+.square-5 {
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    box-shadow: 0 0 2px #000;
+}
+
+.square-1 {
+    background: #e74c3c;
+}
+
+.square-2 {
+    background: #39ff14;
+}
+
+.square-3 {
+    background: #8e44ad;
+}
+
+.square-4 {
+    background: #7fffd4;
+}
+
+.square-5 {
+    background: #3498db;
+}
+
 .square:hover {
     transition-duration: 0ms;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+.colors-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100px;
 }

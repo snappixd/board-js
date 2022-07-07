@@ -1,7 +1,28 @@
 const board = document.querySelector('#board')
 const SQUARES_COUNT = 595
 
-const colors = ['#e74c3c', '#39ff14', '#8e44ad', '#7fffd4', '#3498db', '#e67e22', '#ccff00', '#2ecc71']
+const square_1 = document.querySelector('.square-1')
+const square_2 = document.querySelector('.square-2')
+const square_3 = document.querySelector('.square-3')
+const square_4 = document.querySelector('.square-4')
+const square_5 = document.querySelector('.square-5')
+
+let currentColor = 'red'
+
+const colors = ['#e74c3c', '#39ff14', '#8e44ad', '#7fffd4', '#3498db']
+
+square_1.addEventListener('mousedown', () => {
+    changeCurrColor('#e74c3c')
+})
+square_2.addEventListener('mousedown', () => { changeCurrColor('#39ff14') })
+square_3.addEventListener('mousedown', () => { changeCurrColor('#8e44ad') })
+square_4.addEventListener('mousedown', () => { changeCurrColor('#7fffd4') })
+square_5.addEventListener('mousedown', () => { changeCurrColor('#3498db') })
+
+function changeCurrColor(color) {
+    currentColor = color
+    console.log("Current color: " + currentColor);
+}
 
 for (let i = 0; i < SQUARES_COUNT; i++) {
     const square = document.createElement('div')
@@ -24,7 +45,7 @@ function setColor(elem) {
     //     elem.style.backgroundColor = color
     // }
 
-    const color = getRandomColor()
+    let color = currentColor
 
     elem.style.backgroundColor = color
     elem.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
