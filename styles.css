@@ -70,4 +70,5 @@ body {
     align-items: center;
     flex-wrap: wrap;
     max-width: 100px;
+    left: 10px;
 }
