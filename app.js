@@ -6,6 +6,8 @@ const square_2 = document.querySelector('.square-2')
 const square_3 = document.querySelector('.square-3')
 const square_4 = document.querySelector('.square-4')
 const square_5 = document.querySelector('.square-5')
+const square_6 = document.querySelector('.square-6')
+const square_7 = document.querySelector('.square-7')
 
 let currentColor = 'red';
 let mouseDown = false;
