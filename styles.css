@@ -25,7 +25,9 @@ body {
 .square-2,
 .square-3,
 .square-4,
-.square-5 {
+.square-5,
+.square-6,
+.square-7 {
     width: 16px;
     height: 16px;
     margin: 2px;
@@ -50,6 +52,14 @@ body {
 
 .square-5 {
     background: #3498db;
+}
+
+.square-6 {
+    background: #dbc81f;
+}
+
+.square-7 {
+    background: #1d1d1d;
 }
 
 .square:hover {

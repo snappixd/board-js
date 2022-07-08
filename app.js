@@ -27,6 +27,8 @@ square_2.addEventListener('mousedown', () => { changeCurrColor('#39ff14') })
 square_3.addEventListener('mousedown', () => { changeCurrColor('#8e44ad') })
 square_4.addEventListener('mousedown', () => { changeCurrColor('#7fffd4') })
 square_5.addEventListener('mousedown', () => { changeCurrColor('#3498db') })
+square_6.addEventListener('mousedown', () => { changeCurrColor('#dbc81f') })
+square_7.addEventListener('mousedown', () => { changeCurrColor('#1d1d1d') })
 
 function changeCurrColor(color) {
     currentColor = color
