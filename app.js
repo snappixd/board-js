@@ -65,7 +65,10 @@ function setColor(elem) {
     let color = currentColor
 
     elem.style.backgroundColor = color
-    elem.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
+    if (color != '#1d1d1d') {
+        elem.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
+    }
+
 }
 
 // function removeColor(elem) {
