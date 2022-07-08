@@ -66,7 +66,7 @@ function setColor(elem) {
 
     elem.style.backgroundColor = color
     if (color === '#1d1d1d') {
-        elem.style.boxShadow = '0 0 0px'
+        elem.style.boxShadow = '0 0 0px #000'
     } else {
         elem.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
     }
