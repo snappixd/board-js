@@ -7,7 +7,16 @@ const square_3 = document.querySelector('.square-3')
 const square_4 = document.querySelector('.square-4')
 const square_5 = document.querySelector('.square-5')
 
-let currentColor = 'red'
+let currentColor = 'red';
+let mouseDown = false;
+
+document.body.onmousedown = function() {
+    mouseDown = true;
+}
+
+document.body.onmouseup = function() {
+    mouseDown = false;;
+}
 
 const colors = ['#e74c3c', '#39ff14', '#8e44ad', '#7fffd4', '#3498db']
 
@@ -29,12 +38,16 @@ for (let i = 0; i < SQUARES_COUNT; i++) {
     square.classList.add('square')
 
     square.addEventListener('mouseover', () => {
-        setColor(square)
+        if (mouseDown) {
+            setColor(square)
+            console.log(mouseDown);
+        }
+
     })
 
-    square.addEventListener('mouseleave', () => {
-        removeColor(square)
-    })
+    // square.addEventListener('mouseleave', () => {
+    //     removeColor(square)
+    // })
 
     board.append(square)
 }
@@ -51,10 +64,10 @@ function setColor(elem) {
     elem.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
 }
 
-function removeColor(elem) {
-    elem.style.backgroundColor = '#1d1d1d'
-    elem.style.boxShadow = '0 0 2px #000'
-}
+// function removeColor(elem) {
+//     elem.style.backgroundColor = '#1d1d1d'
+//     elem.style.boxShadow = '0 0 2px #000'
+// }
 
 function getRandomColor() {
     const index = Math.floor(Math.random() * colors.length)
