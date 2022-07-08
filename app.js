@@ -41,6 +41,7 @@ for (let i = 0; i < SQUARES_COUNT; i++) {
     const square = document.createElement('div')
     square.classList.add('square')
 
+
     square.addEventListener('mouseover', () => {
         if (mouseDown) {
             setColor(square)
@@ -49,9 +50,12 @@ for (let i = 0; i < SQUARES_COUNT; i++) {
 
     })
 
-    // square.addEventListener('mouseleave', () => {
-    //     removeColor(square)
-    // })
+    square.addEventListener('mouseleave', () => {
+        if (mouseDown) {
+            setColor(square)
+            console.log(mouseDown);
+        }
+    })
 
     board.append(square)
 }
